@@ -8,6 +8,11 @@ pipeline {
     }
 
     stages {
+        stage('random-ghosting') {
+            steps {
+                sh 'echo "I be Random Ghosting and there is nothing you can do about it!"'
+            }
+        }
         stage('simulator-build') {
             steps {
                 parallel "4.2": {
